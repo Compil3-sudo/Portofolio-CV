@@ -1,10 +1,10 @@
 const About = () => {
   // TODO: reword about me text, style it, add container and make text pretty
-  // TODO: add picture
 
   return (
     <>
-      <div style={{ width: "60%", margin: "auto" }}>
+      <div style={{ width: "60%", margin: "auto", marginTop: "7rem" }}>
+        <img src="rares.png" alt="Rares Tincu" />
         <p>
           Hello! I am Rares, a computer science student from Augsburg, Germany.
         </p>
