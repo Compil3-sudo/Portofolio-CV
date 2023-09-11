@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #010b13;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.logo {
+  margin: 0 1rem 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.linksList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  margin-left: 2rem;
+  padding: 0 1rem;
+}
+
+.linksList a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+
+.linksList a:hover {
+  color: #009698;
+  border-bottom: #000080 0.125em solid;
+}
