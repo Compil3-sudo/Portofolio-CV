@@ -23,7 +23,12 @@ const Navbar = () => {
         <ul className={classes.linksList}>
           {navLinks.map((link) => (
             <li key={link}>
-              <NavLink to={link === "home" ? "/" : link}>
+              <NavLink
+                to={link === "home" ? "/" : link}
+                className={({ isActive }) =>
+                  isActive ? classes.active : undefined
+                }
+              >
                 {link.toLocaleUpperCase()}
               </NavLink>
             </li>

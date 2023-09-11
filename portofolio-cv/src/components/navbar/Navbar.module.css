@@ -38,7 +38,8 @@
 }
 
 
-.linksList a:hover {
+.linksList a:hover,
+.linksList a.active {
   color: #009698;
   border-bottom: #000080 0.125em solid;
 }
