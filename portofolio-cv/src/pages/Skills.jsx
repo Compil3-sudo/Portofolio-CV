@@ -9,7 +9,7 @@ const Skills = () => {
         other tools that I&apos;ve&nbsp;worked with:
       </h2>
 
-      <h3>Web Development:</h3>
+      <h2>Web Development:</h2>
       <div className={classes.devicon}>
         <div className={classes.devText}>
           <i className="devicon-react-original colored"></i>
@@ -44,7 +44,7 @@ const Skills = () => {
         </div>
         <div className={classes.devText}>
           <i className="devicon-dotnetcore-plain colored"></i>
-          <p>ASP.NET Core</p>
+          <p>ASP.NET Core MVC</p>
         </div>
         <div className={classes.devText}>
           <i className="devicon-nextjs-plain"></i>
@@ -71,7 +71,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h3>Machine Learning:</h3>
+      <h2>Machine Learning:</h2>
       <div className={classes.devicon}>
         <div className={classes.devText}>
           <i className="devicon-python-plain-wordmark colored"></i>
@@ -87,7 +87,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h3>Other Programming Languages:</h3>
+      <h2>Other Programming Languages:</h2>
       <div className={classes.devicon}>
         <div className={classes.devText}>
           <i className="devicon-csharp-plain colored"></i>
@@ -103,7 +103,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h3>Git and IDEs:</h3>
+      <h2>Git and IDEs:</h2>
       <div className={classes.devicon}>
         <div className={classes.devText}>
           <i className="devicon-git-plain-wordmark colored"></i>
