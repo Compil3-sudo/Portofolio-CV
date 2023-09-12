@@ -26,7 +26,7 @@ const Education = () => {
         </li>
         <li>
           <h2>
-            Colegiul National “Octavian Goga” (Gymnasium), Hermanstadt (RO
+            Colegiul National “Octavian Goga” (Gymnasium), Hermanstadt (RO)
           </h2>
           <p>Date: 09/2008 – 08/2013</p>
         </li>

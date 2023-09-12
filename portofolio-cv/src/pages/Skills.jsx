@@ -3,7 +3,7 @@ import classes from "./Skills.module.css";
 const Skills = () => {
   return (
     <>
-      <h2>
+      <h2 style={{ marginTop: "7rem" }}>
         I am continously focusing on improving my knowledge with hard work and
         determination. Here are some of the major languages, frameworks, and
         other tools that I have worked with:

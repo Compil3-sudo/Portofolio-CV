@@ -12,6 +12,8 @@ const SocialIcons = () => {
           style={{ marginLeft: "10px", marginRight: "10px" }}
           bgColor="#fefefe"
           fgColor="#121212"
+          target="_blank"
+          rel="noopener noreferrer"
         />
       ))}
     </>

@@ -1,15 +1,30 @@
 import SocialIcons from "../components/socials/SocialIcons";
+import classes from "./Home.module.css";
 
 const Home = () => {
   return (
     <>
+      <h1>add some animation ?</h1>
       <h1>Rares Tincu</h1>
       <h2>
-        I&apos;m&nbsp; a <em>Computer Science Student</em> at{" "}
+        I&apos;m&nbsp;a <em>Computer Science Student</em> at&nbsp;
         <strong>
-          <a href="https://www.uni-augsburg.de/en/">Universität Augsburg</a>
+          <div className={classes.uniLink}>
+            <a
+              href="https://www.uni-augsburg.de/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Universität Augsburg
+            </a>
+          </div>
         </strong>
       </h2>
+      <h3>
+        Open to work as a full-time entry level Full-Stack / Backend Web
+        Developer
+      </h3>
+      <h3>Open to work as a Software Engineer with Python, C# or Java.</h3>
       <SocialIcons />
     </>
   );

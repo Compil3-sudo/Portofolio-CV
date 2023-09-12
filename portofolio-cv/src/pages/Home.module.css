@@ -1,0 +1,15 @@
+.uniLink {
+  display: inline;
+}
+
+.uniLink a {
+  text-decoration: none;
+  color: antiquewhite;
+}
+
+
+.uniLink a:hover,
+.uniLink a.active {
+  color: #009698;
+  border-bottom: #000080 0.125em solid;
+}

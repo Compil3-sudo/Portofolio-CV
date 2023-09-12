@@ -1,4 +1,6 @@
 const Projects = () => {
+  const rememberTODO = 'target="_blank" rel="noopener noreferrer"';
+
   return (
     <>
       <h1>Need to add Product Card with grid</h1>
@@ -8,6 +10,8 @@ const Projects = () => {
 
       <p>should look similar to this:</p>
       <img src="/projects_template.png" alt="" style={{ width: "70%" }} />
+
+      <p>REMEMBER TO ADD TO PROJECT LINKS: {rememberTODO}</p>
 
       <h2>My Projects:</h2>
       <ul>
