@@ -1,5 +1,14 @@
+import ProjectCard from "../components/projects/ProjectCard";
+
 const Projects = () => {
-  const rememberTODO = 'target="_blank" rel="noopener noreferrer"';
+  const projectProps = {
+    imgSource: "",
+    title: "",
+    text: "",
+    github: "",
+    live: "",
+    description: "",
+  };
 
   return (
     <>
@@ -11,7 +20,14 @@ const Projects = () => {
       <p>should look similar to this:</p>
       <img src="/projects_template.png" alt="" style={{ width: "70%" }} />
 
-      <p>REMEMBER TO ADD TO PROJECT LINKS: {rememberTODO}</p>
+      <ProjectCard
+        imgSource=""
+        title="React Learning Projects"
+        text="15 React Projects by Jogn Smilga combined with theoretical React concepts and extra features."
+        github="https://github.com/Compil3-sudo/React-Learning"
+        live="https://react-learning-projects.netlify.app/"
+        description="description"
+      />
 
       <h2>My Projects:</h2>
       <ul>
