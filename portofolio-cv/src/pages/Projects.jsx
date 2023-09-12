@@ -1,15 +1,7 @@
 import ProjectCard from "../components/projects/ProjectCard";
+import projectsList from "../components/projects/projectsList";
 
 const Projects = () => {
-  const projectProps = {
-    imgSource: "",
-    title: "",
-    text: "",
-    github: "",
-    live: "",
-    description: "",
-  };
-
   return (
     <>
       <h1 style={{ marginTop: "6rem" }}>Need to add Product Card with grid</h1>
@@ -17,17 +9,19 @@ const Projects = () => {
       <p>add links to github code and live deploy on hover card</p>
       <p>add detailed project description somewhere</p>
 
-      <p>should look similar to this:</p>
-      <img src="/projects_template.png" alt="" style={{ width: "70%" }} />
+      <h2>add hover effect to make projectCard Image bigger (zoom in)</h2>
 
-      <ProjectCard
-        imgSource=""
-        title="React Learning Projects"
-        text="15 React Projects by Jogn Smilga combined with theoretical React concepts and extra features."
-        github="https://github.com/Compil3-sudo/React-Learning"
-        live="https://react-learning-projects.netlify.app/"
-        description="description"
-      />
+      {projectsList.map((project) => (
+        <ProjectCard
+          key={project.title}
+          imgSource={project.imgSource}
+          title={project.title}
+          text={project.text}
+          github={project.github}
+          live={project.live}
+          details={project.details}
+        />
+      ))}
 
       <h2>My Projects:</h2>
       <ul>
