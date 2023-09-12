@@ -1,3 +1,12 @@
+.title {
+  margin-top: 5rem;
+}
+
+.languagesContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .languages {
   list-style-type: none;
   margin-top: 0;
