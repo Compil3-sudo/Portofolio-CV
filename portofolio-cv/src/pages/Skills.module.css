@@ -1,19 +1,21 @@
-.devicon {
+.devicons {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.devicon i {
-  font-size: 7rem;
-  padding: 1rem;
+.devItem {
+  display: grid;
 }
 
-.devicon p {
+.devItem p {
   font-size: 1.1rem;
   margin-top: 0;
   font-weight: 500;
 }
 
-.devText {
-  display: grid;
+.devItem i {
+  font-size: 7rem;
+  padding: 1rem;
 }
