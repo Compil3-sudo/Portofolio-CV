@@ -1,8 +1,18 @@
 .devicon {
-  font-size: 7rem;
-
+  display: inline-flex;
+  align-items: center;
 }
 
-i {
+.devicon i {
+  font-size: 7rem;
   padding: 1rem;
+}
+
+.devicon p {
+  font-size: 1rem;
+  margin-top: 0;
+}
+
+.devText {
+  display: grid;
 }

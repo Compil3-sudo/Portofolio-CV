@@ -3,53 +3,127 @@ import classes from "./Skills.module.css";
 const Skills = () => {
   return (
     <>
-      <h2 style={{ marginTop: "7rem" }}>
-        I am continously focusing on improving my knowledge with hard work and
+      <h2 style={{ marginTop: "6rem", textAlign: "justify" }}>
+        I&apos;m&nbsp;focusing on improving my knowledge with hard work and
         determination. Here are some of the major languages, frameworks, and
-        other tools that I have worked with:
+        other tools that I&apos;ve&nbsp;worked with:
       </h2>
+
+      <h3>Web Development:</h3>
       <div className={classes.devicon}>
-        <i className="devicon-react-original colored"></i>
-
-        <i className="devicon-redux-original colored"></i>
-
-        <i className="devicon-javascript-plain colored"></i>
-
-        <i className="devicon-typescript-plain colored"></i>
-        <i className="devicon-jest-plain colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-react-original colored"></i>
+          <p>React</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-redux-original colored"></i>
+          <p>Redux</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-javascript-plain colored"></i>
+          <p>Javascript</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-typescript-plain colored"></i>
+          <p>Typescript</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-jest-plain colored"></i>
+          <p>Jest</p>
+        </div>
       </div>
 
       <div className={classes.devicon}>
-        <i className="devicon-mongodb-plain-wordmark colored"></i>
-        <i className="devicon-firebase-plain-wordmark colored"></i>
-        <i className="devicon-dotnetcore-plain colored"></i>
-        <i className="devicon-nextjs-plain"></i>
-        <i className="devicon-nodejs-plain colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-mongodb-plain-wordmark colored"></i>
+          <p>MongoDB</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-firebase-plain-wordmark colored"></i>
+          <p>Firebase</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-dotnetcore-plain colored"></i>
+          <p>ASP.NET Core</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-nextjs-plain"></i>
+          <p>NextJs</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-nodejs-plain colored"></i>
+          <p>NodeJs</p>
+        </div>
       </div>
 
       <div className={classes.devicon}>
-        <i className="devicon-python-plain-wordmark colored"></i>
-        <i className="devicon-numpy-original colored"></i>
-        <i className="devicon-pytorch-plain-wordmark colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-html5-plain-wordmark colored"></i>
+          <p>HTML</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-css3-plain-wordmark colored"></i>
+          <p>CSS</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-bootstrap-plain-wordmark colored"></i>
+          <p>Bootstrap 5</p>
+        </div>
       </div>
 
+      <h3>Machine Learning:</h3>
       <div className={classes.devicon}>
-        <i className="devicon-html5-plain-wordmark colored"></i>
-        <i className="devicon-css3-plain-wordmark colored"></i>
-        <i className="devicon-bootstrap-plain-wordmark colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-python-plain-wordmark colored"></i>
+          <p>Python</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-numpy-original colored"></i>
+          <p>Numpy</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-pytorch-plain-wordmark colored"></i>
+          <p>PyTorch</p>
+        </div>
       </div>
 
+      <h3>Other Programming Languages:</h3>
       <div className={classes.devicon}>
-        <i className="devicon-csharp-plain colored"></i>
-        <i className="devicon-java-plain-wordmark"></i>
-        <i className="devicon-c-plain colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-csharp-plain colored"></i>
+          <p>C#</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-java-plain-wordmark"></i>
+          <p>Java</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-c-plain colored"></i>
+          <p>C</p>
+        </div>
       </div>
 
+      <h3>Git and IDEs:</h3>
       <div className={classes.devicon}>
-        <i className="devicon-git-plain-wordmark colored"></i>
-        <i className="devicon-vscode-plain colored"></i>
-        <i className="devicon-pycharm-plain-wordmark colored"></i>
-        <i className="devicon-intellij-plain-wordmark colored"></i>
+        <div className={classes.devText}>
+          <i className="devicon-git-plain-wordmark colored"></i>
+          <p>GIT</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-vscode-plain colored"></i>
+          <p>VS Code</p>
+          <p>(Favourite)</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-pycharm-plain-wordmark colored"></i>
+          <p>PyCharm</p>
+          <p>(For ML)</p>
+        </div>
+        <div className={classes.devText}>
+          <i className="devicon-intellij-plain-wordmark colored"></i>
+          <p>InteliJ</p>
+          <p>(Java)</p>
+        </div>
       </div>
     </>
   );
