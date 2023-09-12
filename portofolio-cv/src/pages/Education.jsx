@@ -5,7 +5,7 @@ import { IoMdSchool } from "react-icons/io";
 import { SiUdemy } from "react-icons/si";
 
 import classes from "./Education.module.css";
-import EducationItem from "../components/Education-item/EducationItem";
+import EducationItem from "../components/education-item/EducationItem";
 
 const Education = () => {
   const educationColor = "#639cd9";
