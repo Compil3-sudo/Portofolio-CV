@@ -3,7 +3,7 @@ const Projects = () => {
 
   return (
     <>
-      <h1>Need to add Product Card with grid</h1>
+      <h1 style={{ marginTop: "6rem" }}>Need to add Product Card with grid</h1>
       <p>add image with each project inside card</p>
       <p>add links to github code and live deploy on hover card</p>
       <p>add detailed project description somewhere</p>
