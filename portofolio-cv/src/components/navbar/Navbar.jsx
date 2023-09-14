@@ -1,5 +1,7 @@
 import classes from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 const Navbar = () => {
   const navLinks = [
@@ -10,6 +12,11 @@ const Navbar = () => {
     "projects",
     "resume",
   ];
+  const [showLinks, setShowLinks] = useState(true);
+
+  const toggleShow = () => {
+    setShowLinks(!showLinks);
+  };
 
   return (
     <nav className={classes.header}>
@@ -20,20 +27,30 @@ const Navbar = () => {
           </NavLink>
         </div>
 
-        <ul className={classes.linksList}>
-          {navLinks.map((link) => (
-            <li key={link}>
-              <NavLink
-                to={link === "home" ? "/" : link}
-                className={({ isActive }) =>
-                  isActive ? classes.active : undefined
-                }
-              >
-                {link.toLocaleUpperCase()}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <button className={classes.toggleLinks} onClick={toggleShow}>
+          <FaBars />
+        </button>
+
+        <div
+          className={`${classes.linksContainer} ${
+            showLinks ? classes.showLinks : ""
+          }`}
+        >
+          <ul className={classes.linksList}>
+            {navLinks.map((link) => (
+              <li key={link}>
+                <NavLink
+                  to={link === "home" ? "/" : link}
+                  className={({ isActive }) =>
+                    isActive ? classes.active : undefined
+                  }
+                >
+                  {link.toLocaleUpperCase()}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </nav>
   );

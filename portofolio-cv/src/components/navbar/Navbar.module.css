@@ -15,13 +15,19 @@
 .navContainer {
   display: flex;
   align-items: center;
-  margin: auto;
+}
+
+.toggleLinks {
+  display: none;
+}
+
+.linksContainer {
+  position: absolute;
+  right: 10%;
 }
 
 .logo {
-  margin: 0 1rem 0 1rem;
-  display: flex;
-  align-items: center;
+  margin: 0 0 0 2rem;
 }
 
 .linksList {
@@ -43,4 +49,25 @@
 .linksList a.active {
   color: #009698;
   border-bottom: #000080 0.125em solid;
+}
+
+@media screen and (max-width: 768px) {
+  .toggleLinks {
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+  }
+
+  .showLinks .linksContainer {
+    display: block;
+  }
+
+  .showLinks .linksList {
+    display: block;
+  }
+
+  .showLinks .linksList li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
