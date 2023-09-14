@@ -63,7 +63,11 @@ const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
         <Modal.Header closeButton>
           <Modal.Title>{title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>{details}</Modal.Body>
+        <Modal.Body>
+          {Array.isArray(details)
+            ? details.map((detail, index) => <p key={index}>{detail}</p>)
+            : details}
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="dark" onClick={handleClose}>
             Close

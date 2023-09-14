@@ -17,7 +17,14 @@ const projectsList = [
     text: "15 React Projects by Jogn Smilga combined with theoretical React concepts and extra features.",
     github: "https://github.com/Compil3-sudo/React-Learning",
     live: "https://react-learning-projects.netlify.app/",
-    details: "",
+    details: [
+      "React Hooks",
+      "Conditional Rendering",
+      "Forms",
+      "Prop Drilling",
+      "Prop Types",
+      "React Router",
+    ],
   },
   {
     imgSource: CrownClothingImage,
@@ -26,7 +33,17 @@ const projectsList = [
     github:
       "https://github.com/Compil3-sudo/ZTM-React/tree/06-crown-clothing-redux-saga-typescript",
     live: "https://crown-clothing-compil3.netlify.app/",
-    details: "",
+    details: [
+      "Typescript",
+      "Redux Saga",
+      "Loading Data in advance with React Lazy and Suspense",
+      "Stripe",
+      "Firebase",
+      "Jest - Testing & Mocking",
+      "Fetching Data from Firebase",
+      "User Authetication with Email/Google",
+      "Other Branches: GraphQL, Redux Toolkit & GatsbyJS",
+    ],
   },
   {
     imgSource: ReactMealsImage,
@@ -35,7 +52,13 @@ const projectsList = [
     github:
       "https://github.com/Compil3-sudo/AcadeMind-react-complete-guide-code/tree/17-practice-food-order-http-forms",
     live: "https://academind-react-meals.netlify.app/",
-    details: "",
+    details: [
+      "HTTP Requests",
+      "Modal Content",
+      "React Portals and Refs",
+      "Sending Data to Backend",
+      "Redux Toolkit",
+    ],
   },
   {
     imgSource: ReactMpEventsImage,
@@ -44,7 +67,7 @@ const projectsList = [
     github:
       "https://github.com/Compil3-sudo/AcadeMind-react-complete-guide-code/tree/22-authentication-updated",
     live: "https://react-mp-events-auth.onrender.com/",
-    details: "FIX ERROR 404 BUG",
+    details: ["NextJS", ""],
   },
   {
     imgSource: ReactMeetupsImage,
