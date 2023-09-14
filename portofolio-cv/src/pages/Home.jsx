@@ -4,7 +4,6 @@ import classes from "./Home.module.css";
 const Home = () => {
   return (
     <>
-      <h1>add some animation ?</h1>
       <h1>Rares Tincu</h1>
       <h2>
         I&apos;m&nbsp;a <em>Computer Science Student</em> at&nbsp;

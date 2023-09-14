@@ -1,7 +1,6 @@
 import classes from "./Navbar.module.css";
 import { NavLink } from "react-router-dom";
-import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { Nav, Navbar as BootStrapNavBar, Container } from "react-bootstrap";
 
 const Navbar = () => {
   const navLinks = [
@@ -12,33 +11,26 @@ const Navbar = () => {
     "projects",
     "resume",
   ];
-  const [showLinks, setShowLinks] = useState(true);
-
-  const toggleShow = () => {
-    setShowLinks(!showLinks);
-  };
 
   return (
-    <nav className={classes.header}>
-      <div className={classes.navContainer}>
-        <div className={classes.logo}>
+    <BootStrapNavBar
+      fixed="top"
+      collapseOnSelect
+      expand="md"
+      className={classes.header}
+    >
+      <Container>
+        <BootStrapNavBar.Brand>
           <NavLink to="/">
             <img src="/favicon-32x32.png" alt="Rares Tincu" />
           </NavLink>
-        </div>
-
-        <button className={classes.toggleLinks} onClick={toggleShow}>
-          <FaBars />
-        </button>
-
-        <div
-          className={`${classes.linksContainer} ${
-            showLinks ? classes.showLinks : ""
-          }`}
-        >
-          <ul className={classes.linksList}>
+        </BootStrapNavBar.Brand>
+        <BootStrapNavBar.Toggle aria-controls="responsive-navbar-nav" />
+        <BootStrapNavBar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto" />
+          <Nav className="me-auto">
             {navLinks.map((link) => (
-              <li key={link}>
+              <div className={classes.links} key={link}>
                 <NavLink
                   to={link === "home" ? "/" : link}
                   className={({ isActive }) =>
@@ -47,12 +39,12 @@ const Navbar = () => {
                 >
                   {link.toLocaleUpperCase()}
                 </NavLink>
-              </li>
+              </div>
             ))}
-          </ul>
-        </div>
-      </div>
-    </nav>
+          </Nav>
+        </BootStrapNavBar.Collapse>
+      </Container>
+    </BootStrapNavBar>
   );
 };
 

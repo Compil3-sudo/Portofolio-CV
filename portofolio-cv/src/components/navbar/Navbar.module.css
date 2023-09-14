@@ -1,73 +1,20 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   background-color: #010b13;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
   z-index: 100;
 }
 
-.navContainer {
-  display: flex;
-  align-items: center;
+.links {
+  padding: 0.5rem 1rem;
 }
 
-.toggleLinks {
-  display: none;
-}
-
-.linksContainer {
-  position: absolute;
-  right: 10%;
-}
-
-.logo {
-  margin: 0 0 0 2rem;
-}
-
-.linksList {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  list-style-type: none;
-  margin-left: 2rem;
-  padding: 0 1rem;
-}
-
-.linksList a {
+.links a {
   text-decoration: none;
   color: antiquewhite;
 }
 
 
-.linksList a:hover,
-.linksList a.active {
+.links a:hover,
+.links a.active {
   color: #009698;
   border-bottom: #000080 0.125em solid;
-}
-
-@media screen and (max-width: 768px) {
-  .toggleLinks {
-    display: inline-block;
-    position: absolute;
-    right: 10%;
-  }
-
-  .showLinks .linksContainer {
-    display: block;
-  }
-
-  .showLinks .linksList {
-    display: block;
-  }
-
-  .showLinks .linksList li {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
 }
