@@ -4,7 +4,8 @@ const ErrorPage = () => {
   return (
     <>
       <Navbar />
-      <div>ErrorPage</div>
+      <h1>ErrorPage</h1>
+      <h2>You can still use the navbar to navigate :)</h2>
     </>
   );
 };

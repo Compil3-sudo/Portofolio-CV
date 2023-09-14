@@ -7,9 +7,6 @@ import ReduxCartImage from "/projectImages/redux_cart.png";
 import ReactMeetupsImage from "/projectImages/react_meetups.png";
 import ReactMpEventsImage from "/projectImages/react_mp_events.png";
 
-// TODO: ADD detailed details
-// TODO: improve text
-
 const projectsList = [
   {
     imgSource: ReactLearningImage,
@@ -30,7 +27,7 @@ const projectsList = [
   {
     imgSource: CrownClothingImage,
     title: "Crown Clothing",
-    text: "E-commerce App from the ZTM React Course. Learned Typescript, Jest Unit Testing & Mocking, pre-loading data, stripe, firebase. Fixed bugs and added some extra features.",
+    text: "E-commerce App from the ZTM React Course. Learned Typescript, Jest Unit Testing & Mocking, pre-loading data, stripe payments, firebase. Fixed bugs and added some extra features.",
     github:
       "https://github.com/Compil3-sudo/ZTM-React/tree/06-crown-clothing-redux-saga-typescript",
     live: "https://crown-clothing-compil3.netlify.app/",
