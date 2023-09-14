@@ -17,6 +17,7 @@ const Projects = () => {
               github={project.github}
               live={project.live}
               details={project.details}
+              tags={project.tags}
             />
           </div>
         ))}

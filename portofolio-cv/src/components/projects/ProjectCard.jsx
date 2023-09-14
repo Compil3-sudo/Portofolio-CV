@@ -1,9 +1,17 @@
 import Card from "react-bootstrap/Card";
-import { Button, Modal } from "react-bootstrap";
+import { Badge, Button, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
+const ProjectCard = ({
+  imgSource,
+  title,
+  text,
+  github,
+  live,
+  details,
+  tags,
+}) => {
   const redirectToUrl = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -50,7 +58,24 @@ const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
           >
             Details
           </Button>
-          <Card.Footer>Add Tags here ?</Card.Footer>
+          {tags && tags.length && (
+            <Card.Footer>
+              {tags.map((tag) => (
+                <Badge
+                  pill
+                  key={tag}
+                  bg="light"
+                  style={{
+                    color: "black",
+                    marginLeft: "10px",
+                    marginRight: "10px",
+                  }}
+                >
+                  #{tag}
+                </Badge>
+              ))}
+            </Card.Footer>
+          )}
         </Card.Body>
       </Card>
 
@@ -84,7 +109,8 @@ ProjectCard.propTypes = {
   text: PropTypes.string.isRequired,
   github: PropTypes.string.isRequired,
   live: PropTypes.string.isRequired,
-  details: PropTypes.string.isRequired,
+  details: PropTypes.arrayOf(PropTypes.string).isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default ProjectCard;
