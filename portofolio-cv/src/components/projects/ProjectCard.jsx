@@ -11,7 +11,12 @@ const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
 
   return (
     <>
-      <Card style={{ width: "20rem", background: "green" }}>
+      <Card
+        style={{
+          width: "20rem",
+        }}
+        data-bs-theme="dark"
+      >
         <Card.Img
           variant="top"
           src={imgSource}
@@ -24,16 +29,20 @@ const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
           <Button
             style={{ margin: "10px" }}
             onClick={() => redirectToUrl(github)}
+            variant="outline-light"
           >
             Github
           </Button>
           <Button
             style={{ margin: "10px" }}
             onClick={() => redirectToUrl(live)}
+            variant="outline-light"
           >
             Live
           </Button>
-          <Button style={{ margin: "10px" }}>Details</Button>
+          <Button style={{ margin: "10px" }} variant="outline-light">
+            Details
+          </Button>
           <Card.Footer>Add Tags here ?</Card.Footer>
         </Card.Body>
       </Card>

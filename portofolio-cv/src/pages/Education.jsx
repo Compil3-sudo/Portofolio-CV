@@ -117,7 +117,7 @@ const Education = () => {
 
   return (
     <>
-      <h1 className={classes.title}>Education</h1>
+      <h1>Education</h1>
 
       <VerticalTimeline animate={true} layout="1-column">
         <EducationItem
