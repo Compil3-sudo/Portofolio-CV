@@ -1,5 +1,6 @@
 import ProjectCard from "../components/projects/ProjectCard";
 import projectsList from "../components/projects/projectsList";
+import classes from "./Projects.module.css";
 
 const Projects = () => {
   return (
@@ -11,17 +12,20 @@ const Projects = () => {
 
       <h2>add hover effect to make projectCard Image bigger (zoom in)</h2>
 
-      {projectsList.map((project) => (
-        <ProjectCard
-          key={project.title}
-          imgSource={project.imgSource}
-          title={project.title}
-          text={project.text}
-          github={project.github}
-          live={project.live}
-          details={project.details}
-        />
-      ))}
+      <div className={classes.projectsContainer}>
+        {projectsList.map((project) => (
+          <div key={project.title} className={classes.projectsItems}>
+            <ProjectCard
+              imgSource={project.imgSource}
+              title={project.title}
+              text={project.text}
+              github={project.github}
+              live={project.live}
+              details={project.details}
+            />
+          </div>
+        ))}
+      </div>
 
       <h2>My Projects:</h2>
       <ul>
