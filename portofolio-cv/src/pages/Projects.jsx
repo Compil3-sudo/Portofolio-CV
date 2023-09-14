@@ -6,7 +6,6 @@ const Projects = () => {
   return (
     <>
       <h1>Projects</h1>
-      <p>add detailed project description somewhere</p>
 
       <div className={classes.projectsContainer}>
         {projectsList.map((project) => (

@@ -1,13 +1,16 @@
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import { Button, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
-  console.log("TODO: create modal onclick to show: ", details);
-
   const redirectToUrl = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
+  const [showDetails, setShowDetails] = useState(false);
+
+  const handleClose = () => setShowDetails(false);
+  const handleShow = () => setShowDetails(true);
 
   return (
     <>
@@ -40,12 +43,33 @@ const ProjectCard = ({ imgSource, title, text, github, live, details }) => {
           >
             Live
           </Button>
-          <Button style={{ margin: "10px" }} variant="outline-light">
+          <Button
+            style={{ margin: "10px" }}
+            variant="outline-light"
+            onClick={handleShow}
+          >
             Details
           </Button>
           <Card.Footer>Add Tags here ?</Card.Footer>
         </Card.Body>
       </Card>
+
+      <Modal
+        show={showDetails}
+        onHide={handleClose}
+        centered
+        style={{ color: "black" }}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>{title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{details}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="dark" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
