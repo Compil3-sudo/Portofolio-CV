@@ -3,10 +3,18 @@ import classes from "./Skills.module.css";
 const Skills = () => {
   return (
     <>
-      <h2 style={{ marginTop: "6rem", textAlign: "justify" }}>
+      <h2
+        style={{
+          marginTop: "6rem",
+          marginBottom: "3rem",
+          textAlign: "justify",
+        }}
+      >
         I&apos;m&nbsp;focusing on improving my knowledge with hard work and
-        determination. Here are some of the major languages, frameworks, and
-        other tools that I&apos;ve&nbsp;worked with:
+        determination. I want to follow a <strong>MERN</strong> or{" "}
+        <strong>T3</strong> tech stack as a Web Developer. Here are some of the
+        major languages, frameworks, and other tools that I&apos;ve&nbsp;worked
+        with:
       </h2>
 
       <h2>Web Development:</h2>
@@ -71,7 +79,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h2>Machine Learning:</h2>
+      <h2 style={{ marginTop: "3rem" }}>Machine Learning:</h2>
       <div className={classes.devicons}>
         <div className={classes.devItem}>
           <i className="devicon-python-plain-wordmark colored"></i>
@@ -87,7 +95,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h2>Other Programming Languages:</h2>
+      <h2 style={{ marginTop: "3rem" }}>Other Programming Languages:</h2>
       <div className={classes.devicons}>
         <div className={classes.devItem}>
           <i className="devicon-csharp-plain colored"></i>
@@ -103,7 +111,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <h2>Git and IDEs:</h2>
+      <h2 style={{ marginTop: "3rem" }}>Git and IDEs:</h2>
       <div className={classes.devicons}>
         <div className={classes.devItem}>
           <i className="devicon-git-plain-wordmark colored"></i>

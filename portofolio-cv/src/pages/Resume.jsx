@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import RaresResume from "../../public/rares_resume.pdf";
+import RaresResume from "../assets/Rares_Tincu_resume.pdf";
 
 const Resume = () => {
   return (
@@ -11,7 +11,10 @@ const Resume = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <Button variant="light" style={{ fontWeight: "bold" }}>
+        <Button
+          variant="light"
+          style={{ fontWeight: "bold", marginTop: "2rem" }}
+        >
           Download CV
         </Button>
       </a>
