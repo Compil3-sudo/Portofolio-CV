@@ -22,7 +22,7 @@ const Navbar = () => {
       <Container>
         <BootStrapNavBar.Brand>
           <NavLink to="/">
-            <img src="/favicon-32x32.png" alt="Rares Tincu" />
+            <img src="/rares_favicon-light.ico" alt="Rares Tincu" />
           </NavLink>
         </BootStrapNavBar.Brand>
         <BootStrapNavBar.Toggle aria-controls="responsive-navbar-nav" />
