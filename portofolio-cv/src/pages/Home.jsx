@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <h1 className={classes.bottomSpace}>Rares Tincu</h1>
       <h2 className={classes.bottomSpace}>
-        I&apos;ve&nbsp;a <em>Computer Science Graduate</em> at&nbsp;
+        I&apos;m&nbsp;a <em>Computer Science graduate</em> at&nbsp;
         <strong>
           <div className={classes.uniLink}>
             <a
