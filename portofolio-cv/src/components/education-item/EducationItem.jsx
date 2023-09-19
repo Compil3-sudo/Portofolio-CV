@@ -44,16 +44,21 @@ const EducationItem = (props) => {
         icon={icon}
         onTimelineElementClick={udemyClick}
       >
-        <h3
-          className="vertical-timeline-element-title"
-          style={{ fontWeight: "bold" }}
-        >
-          {title}
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">{subtitle}</h4>
-        {paragraphs.map((item, index) => (
-          <p key={title + index} dangerouslySetInnerHTML={{ __html: item }} />
-        ))}
+        <div className="flex flex-col items-center">
+          <h3 className="vertical-timeline-element-title text-3xl font-bold">
+            {title}
+          </h3>
+          <h4 className="vertical-timeline-element-subtitle text-xl font-semibold">
+            {subtitle}
+          </h4>
+          {paragraphs.map((item, index) => (
+            <p
+              style={{ fontWeight: "600" }}
+              key={title + index}
+              dangerouslySetInnerHTML={{ __html: item }}
+            />
+          ))}
+        </div>
       </VerticalTimelineElement>
     </>
   );

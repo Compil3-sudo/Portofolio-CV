@@ -117,89 +117,94 @@ const Education = () => {
 
   return (
     <>
-      <h1>Education</h1>
+      <div className="flex flex-col items-center">
+        <h1 className="mt-24 mb-8  text-5xl font-bold">Education</h1>
+        <VerticalTimeline animate={true} layout="1-column">
+          <EducationItem
+            date={uniEducationProps.date}
+            icon={uniEducationProps.icon}
+            color={uniEducationProps.color}
+            title={uniEducationProps.title}
+            subtitle={uniEducationProps.subtitle}
+            paragraphs={uniParagraphs}
+          />
 
-      <VerticalTimeline animate={true} layout="1-column">
-        <EducationItem
-          date={uniEducationProps.date}
-          icon={uniEducationProps.icon}
-          color={uniEducationProps.color}
-          title={uniEducationProps.title}
-          subtitle={uniEducationProps.subtitle}
-          paragraphs={uniParagraphs}
-        />
+          <EducationItem
+            date={thgEducationProps.date}
+            icon={thgEducationProps.icon}
+            color={thgEducationProps.color}
+            title={thgEducationProps.title}
+            subtitle={thgEducationProps.subtitle}
+            paragraphs={thgParagraphs}
+          />
 
-        <EducationItem
-          date={thgEducationProps.date}
-          icon={thgEducationProps.icon}
-          color={thgEducationProps.color}
-          title={thgEducationProps.title}
-          subtitle={thgEducationProps.subtitle}
-          paragraphs={thgParagraphs}
-        />
+          <EducationItem
+            date={ogsEducationProps.date}
+            icon={ogsEducationProps.icon}
+            color={ogsEducationProps.color}
+            title={ogsEducationProps.title}
+            subtitle={ogsEducationProps.subtitle}
+            paragraphs={ogsParagraphs}
+          />
+        </VerticalTimeline>
 
-        <EducationItem
-          date={ogsEducationProps.date}
-          icon={ogsEducationProps.icon}
-          color={ogsEducationProps.color}
-          title={ogsEducationProps.title}
-          subtitle={ogsEducationProps.subtitle}
-          paragraphs={ogsParagraphs}
-        />
-      </VerticalTimeline>
+        <h2 className="text-3xl font-semibold mt-4 mb-4 pt-2 pb-2">
+          Personal Development:
+        </h2>
 
-      <h2>Personal Development:</h2>
+        <VerticalTimeline animate={true} layout="1-column-right">
+          <EducationItem
+            date={udemyOneEducationProps.date}
+            icon={udemyOneEducationProps.icon}
+            color={udemyOneEducationProps.color}
+            title={udemyOneEducationProps.title}
+            subtitle={udemyOneEducationProps.subtitle}
+            paragraphs={udemyOneParagraphs}
+            udemyCertification={udemyOneEducationProps.udemyCertification}
+          />
 
-      <VerticalTimeline animate={true} layout="1-column-right">
-        <EducationItem
-          date={udemyOneEducationProps.date}
-          icon={udemyOneEducationProps.icon}
-          color={udemyOneEducationProps.color}
-          title={udemyOneEducationProps.title}
-          subtitle={udemyOneEducationProps.subtitle}
-          paragraphs={udemyOneParagraphs}
-          udemyCertification={udemyOneEducationProps.udemyCertification}
-        />
+          <EducationItem
+            date={udemyTwoEducationProps.date}
+            icon={udemyTwoEducationProps.icon}
+            color={udemyTwoEducationProps.color}
+            title={udemyTwoEducationProps.title}
+            subtitle={udemyTwoEducationProps.subtitle}
+            paragraphs={udemyTwoParagraphs}
+            udemyCertification={udemyTwoEducationProps.udemyCertification}
+          />
 
-        <EducationItem
-          date={udemyTwoEducationProps.date}
-          icon={udemyTwoEducationProps.icon}
-          color={udemyTwoEducationProps.color}
-          title={udemyTwoEducationProps.title}
-          subtitle={udemyTwoEducationProps.subtitle}
-          paragraphs={udemyTwoParagraphs}
-          udemyCertification={udemyTwoEducationProps.udemyCertification}
-        />
+          <EducationItem
+            date={udemyThreeEducationProps.date}
+            icon={udemyThreeEducationProps.icon}
+            color={udemyThreeEducationProps.color}
+            title={udemyThreeEducationProps.title}
+            subtitle={udemyThreeEducationProps.subtitle}
+            paragraphs={udemyThreeParagraphs}
+            udemyCertification={udemyThreeEducationProps.udemyCertification}
+          />
 
-        <EducationItem
-          date={udemyThreeEducationProps.date}
-          icon={udemyThreeEducationProps.icon}
-          color={udemyThreeEducationProps.color}
-          title={udemyThreeEducationProps.title}
-          subtitle={udemyThreeEducationProps.subtitle}
-          paragraphs={udemyThreeParagraphs}
-          udemyCertification={udemyThreeEducationProps.udemyCertification}
-        />
+          <EducationItem
+            date={udemyFourEducationProps.date}
+            icon={udemyFourEducationProps.icon}
+            color={udemyFourEducationProps.color}
+            title={udemyFourEducationProps.title}
+            subtitle={udemyFourEducationProps.subtitle}
+            paragraphs={udemyFourParagraphs}
+            udemyCertification={udemyFourEducationProps.udemyCertification}
+          />
+        </VerticalTimeline>
 
-        <EducationItem
-          date={udemyFourEducationProps.date}
-          icon={udemyFourEducationProps.icon}
-          color={udemyFourEducationProps.color}
-          title={udemyFourEducationProps.title}
-          subtitle={udemyFourEducationProps.subtitle}
-          paragraphs={udemyFourParagraphs}
-          udemyCertification={udemyFourEducationProps.udemyCertification}
-        />
-      </VerticalTimeline>
-
-      <h2>Spoken Languages:</h2>
-      <div className={classes.languagesContainer}>
-        <ul className={classes.languages}>
-          <li>German (Fluent)</li>
-          <li>English Advanced (C1)</li>
-          <li>French (B1+)</li>
-          <li>Romanian (Native)</li>
-        </ul>
+        <h2 className="text-3xl font-semibold mt-4 mb-4 pt-2 pb-2">
+          Spoken Languages:
+        </h2>
+        <div className={classes.languagesContainer}>
+          <ul className={classes.languages}>
+            <li>German (Fluent)</li>
+            <li>English Advanced (C1)</li>
+            <li>French (B1+)</li>
+            <li>Romanian (Native)</li>
+          </ul>
+        </div>
       </div>
     </>
   );
