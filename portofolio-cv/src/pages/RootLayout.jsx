@@ -7,9 +7,9 @@ const RootLayout = () => {
     <>
       <Navbar />
       <ScrollToTop />
-      <main style={{ marginTop: "4rem" }}>
-        <Outlet />
-      </main>
+      <Outlet />
+      {/* <main>
+      </main> */}
     </>
   );
 };
