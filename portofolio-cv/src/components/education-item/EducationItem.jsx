@@ -39,7 +39,6 @@ const EducationItem = (props) => {
             ? udemyArrowStyle
             : { borderRight: "7px solid " + color }
         }
-        date={date}
         iconStyle={{ background: color, color: "#fff" }}
         icon={icon}
         onTimelineElementClick={udemyClick}
@@ -58,6 +57,9 @@ const EducationItem = (props) => {
               dangerouslySetInnerHTML={{ __html: item }}
             />
           ))}
+          <p className="self-start opacity-70" style={{ fontWeight: "700" }}>
+            {date}
+          </p>
         </div>
       </VerticalTimelineElement>
     </>
