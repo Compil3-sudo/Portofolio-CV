@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`fixed top-0 h-16 w-full flex justify-between items-center px-4 z-10 bg-slate-900`}
+      className={`fixed top-0 h-16 w-full flex flex-wrap justify-between items-center px-4 z-10 bg-slate-900`}
     >
       <div className="ml-4">
         <NavLink to="/">
@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
       {/* menu */}
 
-      {/* Bars */}
+      {/* Bars / X - close */}
       <div className="md:hidden z-20" onClick={handleToggleNav}>
         {toggleNav ? <FaTimes size={20} /> : <FaBars size={20} />}
       </div>
@@ -77,11 +77,12 @@ const Navbar = () => {
       {/* mobile menu */}
       <div
         ref={mobileMenuRef}
-        className={
+        className={` md:hidden
+        ${
           toggleNav
-            ? "md:hidden fixed top-16 left-0 w-full bg-slate-900 flex flex-col justify-center items-center"
-            : "hidden"
-        }
+            ? "max-h-fit fixed top-16 left-0 w-full bg-slate-900 flex flex-col justify-center items-center transition-all duration-500 ease-in-out"
+            : "max-h-0 overflow-hidden absolute"
+        }`}
       >
         {navLinks.map((link) => (
           <div className={`${classes.links} py-2`} key={link}>

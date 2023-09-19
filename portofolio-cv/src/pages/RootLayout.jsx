@@ -8,8 +8,6 @@ const RootLayout = () => {
       <Navbar />
       <ScrollToTop />
       <Outlet />
-      {/* <main>
-      </main> */}
     </>
   );
 };
