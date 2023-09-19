@@ -22,7 +22,8 @@ const ProjectCard = ({
 
   return (
     <>
-      <Card
+      <div
+        className="border bg-gray-900  rounded-lg p-6 text-slate-100 relative"
         style={{
           width: "20rem",
         }}
@@ -77,7 +78,7 @@ const ProjectCard = ({
             </Card.Footer>
           )}
         </Card.Body>
-      </Card>
+      </div>
 
       <Modal
         show={showDetails}
