@@ -3,16 +3,18 @@ import classes from "./About.module.css";
 const About = () => {
   return (
     <>
-      <div className={classes.center}>
-        <div className={classes.profileImage}>
+      <div className="flex flex-col items-center justify-center mt-28 mx-auto">
+        <div
+          className={`${classes.profileImage} flex items-center justify-center flex-col`}
+        >
           <img src="rares.png" alt="Rares Tincu" />
         </div>
-        <div>
-          <p>
+        <div className="w-3/4 text-justify text-lg lg:w-3/5">
+          <p className="pb-4">
             Hello! I&apos;m&nbsp;<strong>Rares</strong>, a Computer Science
             student from Augsburg, Germany.
           </p>
-          <p>
+          <p className="pb-4">
             I moved to Germany in the 10th grade from Sibiu, Romania and
             enrolled at the Theodor-Heuss-Gymnasium in Nördlingen. I
             didn&apos;t&nbsp;know any german, so I had to learn it as soon as
@@ -22,7 +24,7 @@ const About = () => {
             I&apos;ve&nbsp;managed to graduate with 2.4 (grades are from 1 to 6,
             where 1 is the best).
           </p>
-          <p>
+          <p className="pb-4">
             After this I&apos;ve&nbsp;moved to Augsburg to study Computer
             Science at the University. I&apos;ve&nbsp;learned a lot about object
             oriented programming, the SOLID programming principles, Java,
@@ -42,12 +44,13 @@ const About = () => {
             this description with zero-shot text classification, in order to
             determine whether the description matches the expected sound events.
           </p>
-          <p>
+          <p className="pb-10">
             During the last year I&apos;ve&nbsp;been learning core concepts
             about Web Development on my own, such as React and Javascript. My
             main goal is to improve my programming knowledge and become a better
-            programmer and get a job. I&apos;m&nbsp;trying to focus on a MERN or
-            T3 tech stack.
+            programmer and get a job. I&apos;m&nbsp;trying to focus on a MERN
+            tech stack, while also learning an SQL database, such as SQLite,
+            MySQL or PostgreSQL and Next.js.
           </p>
         </div>
       </div>

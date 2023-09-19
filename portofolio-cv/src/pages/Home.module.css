@@ -1,7 +1,3 @@
-.bottomSpace {
-  margin-bottom: 2rem;
-}
-
 .uniLink {
   display: inline;
 }
@@ -14,6 +10,6 @@
 
 .uniLink a:hover,
 .uniLink a.active {
-  color: #009698;
-  border-bottom: #000080 0.125em solid;
+  color: #10b981;
+  border-bottom: #06b6d4 0.125em solid;
 }
