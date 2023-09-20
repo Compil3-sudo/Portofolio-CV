@@ -117,7 +117,7 @@ const Education = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 lg:px-60">
+      <div className="container mx-auto px-4 lg:px-40 xl:px-60">
         <div className="flex flex-col items-center">
           <h1 className="mt-24 mb-8  text-5xl font-bold">Education</h1>
           <VerticalTimeline animate={true} layout="1-column">
@@ -153,11 +153,7 @@ const Education = () => {
             Personal Development:
           </h2>
 
-          <VerticalTimeline
-            animate={true}
-            layout="1-column-right"
-            className="sm:w-3/4 md:w-3/4 lg:w-1/2"
-          >
+          <VerticalTimeline animate={true} layout="1-column-right">
             <EducationItem
               date={udemyOneEducationProps.date}
               icon={udemyOneEducationProps.icon}

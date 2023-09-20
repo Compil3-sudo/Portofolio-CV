@@ -5,22 +5,24 @@ import classes from "./Projects.module.css";
 const Projects = () => {
   return (
     <>
-      <h1>Projects</h1>
+      <div className="container mx-auto px-16 mt-24">
+        <h1 className="text-center">Projects</h1>
 
-      <div className={classes.projectsContainer}>
-        {projectsList.map((project) => (
-          <div key={project.title} className={classes.projectsItems}>
-            <ProjectCard
-              imgSource={project.imgSource}
-              title={project.title}
-              text={project.text}
-              github={project.github}
-              live={project.live}
-              details={project.details}
-              tags={project.tags}
-            />
-          </div>
-        ))}
+        <div className={classes.projectsContainer}>
+          {projectsList.map((project) => (
+            <div key={project.title} className={classes.projectsItems}>
+              <ProjectCard
+                imgSource={project.imgSource}
+                title={project.title}
+                text={project.text}
+                github={project.github}
+                live={project.live}
+                details={project.details}
+                tags={project.tags}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
