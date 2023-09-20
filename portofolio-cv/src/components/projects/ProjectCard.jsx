@@ -1,5 +1,4 @@
-import Card from "react-bootstrap/Card";
-import { Badge, Button, Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { useState } from "react";
 
@@ -23,61 +22,54 @@ const ProjectCard = ({
   return (
     <>
       <div
-        className="border bg-gray-900  rounded-lg p-6 text-slate-100 relative"
+        id="project-card"
+        className="border bg-gray-900 rounded-lg text-slate-100 flex flex-col h-full"
         style={{
           width: "20rem",
         }}
-        data-bs-theme="dark"
       >
-        <Card.Img
-          variant="top"
-          src={imgSource}
-          alt={title}
-          style={{ maxHeight: "200px", width: "100%" }}
-        />
-        <Card.Body>
-          <Card.Title>{title}</Card.Title>
-          <Card.Text>{text}</Card.Text>
-          <Button
-            style={{ margin: "10px" }}
-            onClick={() => redirectToUrl(github)}
-            variant="outline-light"
-          >
-            Github
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            onClick={() => redirectToUrl(live)}
-            variant="outline-light"
-          >
-            Live
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="outline-light"
-            onClick={handleShow}
-          >
-            Details
-          </Button>
+        <img src={imgSource} alt={title} className="rounded-t-lg" />
+        <div id="card-body" className="flex flex-col h-full">
+          <div className="container mx-auto px-2">
+            <h2 className="text-center py-3 text-lg font-semibold">{title}</h2>
+            <h3 className="text-justify px-6">{text}</h3>
+            <div className="flex justify-center mt-4">
+              <button
+                style={{ margin: "10px" }}
+                onClick={() => redirectToUrl(github)}
+              >
+                Github
+              </button>
+              <button
+                style={{ margin: "10px" }}
+                onClick={() => redirectToUrl(live)}
+              >
+                Live
+              </button>
+              <button style={{ margin: "10px" }} onClick={handleShow}>
+                Details
+              </button>
+            </div>
+          </div>
+
           {tags && tags.length && (
-            <Card.Footer>
-              {tags.map((tag) => (
-                <Badge
-                  pill
-                  key={tag}
-                  bg="light"
-                  style={{
-                    color: "black",
-                    marginLeft: "10px",
-                    marginRight: "10px",
-                  }}
-                >
-                  #{tag}
-                </Badge>
-              ))}
-            </Card.Footer>
+            <div
+              id="tags"
+              className="rounded-b-lg border-t-2 bg-stone-600 bg-opacity-70 flex-grow"
+            >
+              <div className="flex flex-wrap justify-center">
+                {tags.map((tag) => (
+                  <div
+                    className="rounded-full bg-slate-50 text-slate-800 text-xs font-semibold m-2"
+                    key={tag}
+                  >
+                    <div className="p-1">#{tag}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
-        </Card.Body>
+        </div>
       </div>
 
       <Modal
