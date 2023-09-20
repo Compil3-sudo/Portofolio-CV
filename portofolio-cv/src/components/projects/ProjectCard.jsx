@@ -1,7 +1,9 @@
-import { Modal } from "react-bootstrap";
+// import { Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Button from "../button/Button";
+import Modal from "../modal/Modal";
+import { VscClose } from "react-icons/vsc";
 
 const ProjectCard = ({
   imgSource,
@@ -58,24 +60,41 @@ const ProjectCard = ({
         </div>
       </div>
 
-      <Modal
-        show={showDetails}
-        onHide={handleClose}
-        centered
-        style={{ color: "black" }}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>{title}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          {Array.isArray(details)
-            ? details.map((detail, index) => <p key={index}>{detail}</p>)
-            : details}
-        </Modal.Body>
-        <Modal.Footer>
-          <button onClick={handleClose}>Close</button>
-        </Modal.Footer>
-      </Modal>
+      {showDetails && (
+        <Modal onClose={handleClose}>
+          <div className="flex flex-col">
+            <div
+              id="modal-header"
+              className="grid grid-flow-col items-center border-b-2 border-b-slate-400"
+            >
+              <h1 className="text-2xl font-bold">{title}</h1>
+              <div
+                className="justify-self-end cursor-pointer"
+                onClick={handleClose}
+              >
+                <VscClose size={25} />
+              </div>
+            </div>
+            <div id="modal-body" className="border-b-2 border-b-slate-400">
+              {Array.isArray(details)
+                ? details.map((detail, index) => (
+                    <p className="py-1 my-1" key={index}>
+                      {detail}
+                    </p>
+                  ))
+                : details}
+            </div>
+            <div id="modal-footer" className="mt-2 flex flex-col items-end">
+              <Button
+                additionalStyles="p-2 hover:bg-slate-900"
+                onClick={handleClose}
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </Modal>
+      )}
     </>
   );
 };
