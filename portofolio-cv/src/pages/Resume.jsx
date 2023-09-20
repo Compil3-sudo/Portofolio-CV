@@ -7,7 +7,7 @@ const Resume = () => {
     <>
       <div className="container mx-auto px-16">
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-3xl font-semibold mb-4">
             Click on the button to download my Resume (CV)
           </h2>
           <a
@@ -18,7 +18,7 @@ const Resume = () => {
           >
             <Button>
               <div className="inline-flex items-center">
-                <BiSolidDownload size={20} style={{ marginRight: "0.25rem" }} />{" "}
+                <BiSolidDownload size={20} style={{ marginRight: "0.25rem" }} />
                 Download CV
               </div>
             </Button>

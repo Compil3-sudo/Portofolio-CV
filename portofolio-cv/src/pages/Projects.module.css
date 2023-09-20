@@ -5,6 +5,7 @@
   row-gap: 2rem;
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
+  justify-content: center;
 }
 
 .projectsItems {
@@ -18,7 +19,7 @@
   transform: scale(1.2);
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
   .projectsContainer {
     grid-template-columns: 1fr 1fr;
   }

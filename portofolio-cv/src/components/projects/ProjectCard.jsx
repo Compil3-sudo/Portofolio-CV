@@ -24,7 +24,7 @@ const ProjectCard = ({
     <>
       <div
         id="project-card"
-        className="w-80 border bg-gray-900 rounded-lg text-slate-100 flex flex-col h-full"
+        className="shadow-md shadow-slate-500 w-80 border bg-gray-900 rounded-lg text-slate-100 flex flex-col h-full"
       >
         <img src={imgSource} alt={title} className="rounded-t-lg" />
         <div id="card-body" className="flex flex-col h-full">
