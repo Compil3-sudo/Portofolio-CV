@@ -1,6 +1,7 @@
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import Button from "../button/Button";
 
 const ProjectCard = ({
   imgSource,
@@ -23,32 +24,17 @@ const ProjectCard = ({
     <>
       <div
         id="project-card"
-        className="border bg-gray-900 rounded-lg text-slate-100 flex flex-col h-full"
-        style={{
-          width: "20rem",
-        }}
+        className="w-80 border bg-gray-900 rounded-lg text-slate-100 flex flex-col h-full"
       >
         <img src={imgSource} alt={title} className="rounded-t-lg" />
         <div id="card-body" className="flex flex-col h-full">
           <div className="container mx-auto px-2">
             <h2 className="text-center py-3 text-lg font-semibold">{title}</h2>
             <h3 className="text-justify px-6">{text}</h3>
-            <div className="flex justify-center mt-4">
-              <button
-                style={{ margin: "10px" }}
-                onClick={() => redirectToUrl(github)}
-              >
-                Github
-              </button>
-              <button
-                style={{ margin: "10px" }}
-                onClick={() => redirectToUrl(live)}
-              >
-                Live
-              </button>
-              <button style={{ margin: "10px" }} onClick={handleShow}>
-                Details
-              </button>
+            <div className="flex justify-center mt-4 mb-2">
+              <Button onClick={() => redirectToUrl(github)}>Github</Button>
+              <Button onClick={() => redirectToUrl(live)}>Live</Button>
+              <Button onClick={handleShow}>Details</Button>
             </div>
           </div>
 
@@ -87,9 +73,7 @@ const ProjectCard = ({
             : details}
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
+          <button onClick={handleClose}>Close</button>
         </Modal.Footer>
       </Modal>
     </>

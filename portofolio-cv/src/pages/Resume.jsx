@@ -1,5 +1,6 @@
-import { Button } from "react-bootstrap";
 import RaresResume from "../assets/Rares_Tincu_resume.pdf";
+import Button from "../components/button/Button";
+import { BiSolidDownload } from "react-icons/bi";
 
 const Resume = () => {
   return (
@@ -15,11 +16,11 @@ const Resume = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <Button
-              variant="light"
-              style={{ fontWeight: "bold", marginTop: "2rem" }}
-            >
-              Download CV
+            <Button>
+              <div className="inline-flex items-center">
+                <BiSolidDownload size={20} style={{ marginRight: "0.25rem" }} />{" "}
+                Download CV
+              </div>
             </Button>
           </a>
         </div>
