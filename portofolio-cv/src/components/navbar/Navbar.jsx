@@ -15,6 +15,9 @@ const Navbar = () => {
 
   const [toggleNav, setToggleNav] = useState(false);
   const mobileMenuRef = useRef(null);
+  const navLinksRef = useRef(null);
+
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const handleToggleNav = (event) => {
     event.stopPropagation();
@@ -42,6 +45,33 @@ const Navbar = () => {
     };
   }, [toggleNav]);
 
+  useEffect(() => {
+    const linksHeight =
+      navLinksRef.current.getBoundingClientRect().height * navLinks.length;
+
+    if (toggleNav) {
+      mobileMenuRef.current.style.height = `${linksHeight}px`;
+    } else {
+      mobileMenuRef.current.style.height = "0px";
+    }
+  }, [toggleNav, navLinks.length]);
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(window.innerWidth);
+    }
+
+    if (windowSize > 768) {
+      setToggleNav(false);
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [windowSize]);
+
   return (
     <div
       className={`fixed top-0 h-16 w-full flex flex-wrap justify-between items-center px-4 z-10 bg-slate-900`}
@@ -52,53 +82,32 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      {/* menu */}
-      <div className="hidden md:flex mx-auto">
-        {navLinks.map((link) => (
-          <div className={`${classes.links} py-2`} key={link}>
-            <NavLink
-              to={link === "home" ? "/" : link}
-              className={({ isActive }) =>
-                isActive ? classes.active : undefined
-              }
-            >
-              {link.toLocaleUpperCase()}
-            </NavLink>
-          </div>
-        ))}
-      </div>
-      {/* menu */}
-
       {/* Bars / X - close */}
       <div className="md:hidden z-20" onClick={handleToggleNav}>
         {toggleNav ? <FaTimes size={20} /> : <FaBars size={20} />}
       </div>
 
-      {/* mobile menu */}
+      {/* menu */}
       <div
         ref={mobileMenuRef}
-        className={` md:hidden
-        ${
-          toggleNav
-            ? "max-h-fit fixed top-16 left-0 w-full bg-slate-900 flex flex-col justify-center items-center transition-all duration-500 ease-in-out"
-            : "max-h-0 overflow-hidden absolute"
-        }`}
+        className={`bg-slate-900 max-md:flex max-md:flex-col max-md:justify-center max-md:items-center transition-all duration-400 ease-linear max-md:fixed max-md:top-16 max-md:left-0 max-md:w-full md:h-0 md:flex md:mx-auto md:items-center
+        ${toggleNav ? "" : "max-md:overflow-hidden"}`}
       >
         {navLinks.map((link) => (
-          <div className={`${classes.links} py-2`} key={link}>
+          <div className={`${classes.links} py-2`} key={link} ref={navLinksRef}>
             <NavLink
               to={link === "home" ? "/" : link}
               className={({ isActive }) =>
                 isActive ? classes.active : undefined
               }
-              onClick={handleToggleNav}
+              onClick={() => setToggleNav(false)}
             >
               {link.toLocaleUpperCase()}
             </NavLink>
           </div>
         ))}
       </div>
-      {/* mobile menu */}
+      {/* menu */}
     </div>
   );
 };

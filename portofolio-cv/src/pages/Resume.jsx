@@ -7,7 +7,7 @@ const Resume = () => {
     <>
       <div className="container mx-auto px-16">
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl font-semibold mb-4">
+          <h2 className="text-3xl font-semibold mb-8">
             Click on the button to download my Resume (CV)
           </h2>
           <a
