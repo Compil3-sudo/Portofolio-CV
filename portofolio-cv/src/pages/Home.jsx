@@ -4,7 +4,7 @@ import classes from "./Home.module.css";
 const Home = () => {
   return (
     <>
-      <div className="container mx-auto px-16">
+      <div className="container mx-auto px-16 py-16">
         <div className="text-center">
           <h1 className="mb-8 font-bold">Rares Tincu</h1>
           <h2 className="mb-8 text-2xl px-2">
