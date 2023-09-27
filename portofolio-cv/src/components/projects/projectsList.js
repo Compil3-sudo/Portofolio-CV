@@ -80,12 +80,13 @@ const projectsList = [
   {
     imgSource: ReactMeetupsImage,
     title: "React Meetups",
-    text: "NextJS Application to see and create Meetings. Fetching and sending data to MongoDB.",
+    text: "NextJS Application to see and create Meetings. Fetching and sending data to MongoDB Atlas with a custom API route. Using Static Site Generation (SSG) to pre-render data.",
     github: "https://github.com/Compil3-sudo/Meetups-NextJs-Project",
     live: "https://meetups-nextjs-academind-project.vercel.app/",
     details: [
       "NextJS",
       "NextJS - navigation & hooks",
+      "Static Site Generation",
       "Server Side Rendering",
       "Dynamic Pages with Parameters",
       "Dynamic Routing - NextJS",
