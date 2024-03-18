@@ -18,10 +18,10 @@ const Resume = () => {
             <Button>
               <div className="inline-flex items-center">
                 <BiSolidDownload size={20} style={{ marginRight: "0.25rem" }} />
-                REWORKING
+                REWORKING - WILL UPDATE SOON
               </div>
             </Button>
-          </a>
+{/*           </a> */}
         </div>
       </div>
     </>
