@@ -9,16 +9,16 @@ const Resume = () => {
           <h2 className="text-3xl font-semibold mb-8">
             Click on the button to download my Resume (CV)
           </h2>
-          <a
+{/*           <a
             href="#"
             download="Rares Tincu CV"
             target="_blank"
             rel="noreferrer"
-          >
+          > */}
             <Button>
               <div className="inline-flex items-center">
                 <BiSolidDownload size={20} style={{ marginRight: "0.25rem" }} />
-                Download CV
+                REWORKING
               </div>
             </Button>
           </a>
