@@ -1,4 +1,3 @@
-import RaresResume from "../assets/Rares_Tincu_resume.pdf";
 import Button from "../components/button/Button";
 import { BiSolidDownload } from "react-icons/bi";
 
@@ -11,7 +10,7 @@ const Resume = () => {
             Click on the button to download my Resume (CV)
           </h2>
           <a
-            href={RaresResume}
+            href="#"
             download="Rares Tincu CV"
             target="_blank"
             rel="noreferrer"
